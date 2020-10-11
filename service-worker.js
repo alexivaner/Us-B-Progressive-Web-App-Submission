@@ -1,14 +1,30 @@
-const CACHE_NAME = "firstpwa-v1";
+const CACHE_NAME = "usbv3";
 var urlsToCache = [
   "/",
   "/nav.html",
   "/index.html",
-
-  "/css/init.js",
-
+  "/assets/about.jpg",
+  "/assets/background1.jpg",
+  "/assets/comingsoon.jpg",
+  "/assets/contact.jpg",
+  "/assets/icon.png",
+  "/assets/logo.png",
+  "/css/materialize.css",
   "/css/materialize.min.css",
+  "/css/style.css",
+  "/js/init.js",
+  "/js/materialize.js",
   "/js/materialize.min.js",
-  "/js/nav.js"
+  "/js/nav.js",
+  "/pages/home.html",
+  "/pages/about.html",
+  "/pages/contact.html",
+  "/pages/categories.html",
+  "/pages/register.html",
+  "/pages/showcase.html",
+  "https://fonts.googleapis.com/icon?family=Material+Icons",
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+  "https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap"
 ];
 
 self.addEventListener("install", function(event) {
@@ -37,6 +53,8 @@ self.addEventListener("fetch", function(event) {
       })
   );
 });
+
+
 
 self.addEventListener("activate", function(event) {
   event.waitUntil(

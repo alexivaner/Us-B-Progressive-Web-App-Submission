@@ -18,7 +18,7 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><img src="assets/logo.png" alt="Logo Us&B" style="width:60px;"></a>
+      <a id="logo-container" href="#" class="brand-logo"><img src="assets/logo.png" alt="Logo Us&B" style="width:52px;"></a>
 
       <ul class="topnav right hide-on-med-and-down"></ul>
 
@@ -73,24 +73,24 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/nav.js"></script>
-
+  <script>
+    // REGISTER SERVICE WORKER
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(function() {
+            console.log("Pendaftaran ServiceWorker berhasil");
+          })
+          .catch(function() {
+            console.log("Pendaftaran ServiceWorker gagal");
+          });
+      });
+    } else {
+      console.log("ServiceWorker belum didukung browser ini.");
+    }
+  </script>
 </body>
-<!-- <script>
-  // REGISTER SERVICE WORKER
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function() {
-      navigator.serviceWorker
-        .register("/service-worker.js")
-        .then(function() {
-          console.log("Pendaftaran ServiceWorker berhasil");
-        })
-        .catch(function() {
-          console.log("Pendaftaran ServiceWorker gagal");
-        });
-    });
-  } else {
-    console.log("ServiceWorker belum didukung browser ini.");
-  }
-</script> -->
+
 
 </html>

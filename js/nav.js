@@ -54,6 +54,14 @@ document.addEventListener("DOMContentLoaded", function() {
             var elems=document.querySelectorAll(".parallax");
             M.Parallax.init(elems);
           }
+          if(page==="register"){
+            var elems=document.querySelectorAll(".parallax");
+            M.Parallax.init(elems);
+          }
+          if(page==="contact"){
+            var elems=document.querySelectorAll(".parallax");
+            M.Parallax.init(elems);
+          }
         } else if (this.status == 404) {
           content.innerHTML = "<p>Halaman tidak ditemukan.</p>";
         } else {
