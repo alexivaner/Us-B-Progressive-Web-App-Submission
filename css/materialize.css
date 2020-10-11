@@ -980,11 +980,11 @@
 }
 
 .teal {
-  background-color: #009688 !important;
+  background-color: #263238      !important;
 }
 
 .teal-text {
-  color: #009688 !important;
+  color: #e65100 !important;
 }
 
 .teal.lighten-5 {
@@ -1012,15 +1012,15 @@
 }
 
 .teal.lighten-2 {
-  background-color: #4db6ac !important;
+  background-color: #26a69a !important;
 }
 
 .teal-text.text-lighten-2 {
-  color: #4db6ac !important;
+  color: #fafafa   !important;
 }
 
 .teal.lighten-1 {
-  background-color: #26a69a !important;
+  background-color: #e65100 !important;
 }
 
 .teal-text.text-lighten-1 {
@@ -2413,7 +2413,10 @@ html [type="button"],
   -webkit-appearance: button;
   /* 2 */
 }
-
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
 /**
  * Remove the inner border and padding in Firefox.
  */
@@ -2814,7 +2817,7 @@ video.responsive-video {
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 500px;
+  height: 800px;
 }
 
 .parallax-container .parallax {
@@ -4752,7 +4755,7 @@ small {
 }
 
 .card .card-title {
-  font-size: 24px;
+  font-size: 10px;
   font-weight: 300;
 }
 

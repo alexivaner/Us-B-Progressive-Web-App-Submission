@@ -29,12 +29,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
       }
     };
-    xhttp.open("GET", "nav.html", true);
+    xhttp.open("GET", "../nav.html", true);
     xhttp.send();
   }
 
   // Load page content
   var page = window.location.hash.substr(1);
+  console.log(page);
   if (page == "") page = "home";
   loadPage(page);
 
@@ -45,6 +46,14 @@ document.addEventListener("DOMContentLoaded", function() {
         var content = document.querySelector("#body-content");
         if (this.status == 200) {
           content.innerHTML = xhttp.responseText;
+          if(page==="home"){
+            var elems=document.querySelectorAll(".parallax");
+            M.Parallax.init(elems);
+          }
+          if(page==="about"){
+            var elems=document.querySelectorAll(".parallax");
+            M.Parallax.init(elems);
+          }
         } else if (this.status == 404) {
           content.innerHTML = "<p>Halaman tidak ditemukan.</p>";
         } else {
@@ -52,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
     };
-    xhttp.open("GET", "pages/" + page + ".html", true);
+    xhttp.open("GET", "../pages/" + page + ".html", true);
     xhttp.send();
   }
 });
